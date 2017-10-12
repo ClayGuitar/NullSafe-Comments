@@ -102,3 +102,10 @@ NullSafe
 Final
 ----------------------------
 `-(void)doesNotRecognizeSelector:(SEL)aSelector`方法中，抛出异常。等等，为什么我们不能通过给`NSObject`创建一个 `category`，重写这个方法，在这里处理消息未被处理的情况呀？在苹果的官方文档中，明确提到，“一定不能让这个函数就这么结束掉，必须抛出异常”。除了听官方文档的话，其实在分类中通过重写该方法处理各种消息未被处理的情况，会让这个分类的方法特别长，不利于维护。而且还有个原因，明明方法名叫『无法识别 selector』，其中却是一大堆处理该情况的代码，也很奇怪。
+
+参考文章
+------------------------------------------
+[继承自NSObject的不常用又很有用的函数（2）](http://www.cnblogs.com/biosli/p/NSObject_inherit_2.html)  
+[Objective-C特性：Runtime](http://www.jianshu.com/p/25a319aee33d)
+[iOS开发-Runtime详解（简书）](http://www.cnblogs.com/ioshe/p/5489086.html)  
+[IOS动态方法决议](http://blog.csdn.net/snmhm1991/article/details/38490601)
